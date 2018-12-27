@@ -1,0 +1,460 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Helmet lights - base"
+Date "2018-12-26"
+Rev ""
+Comp ""
+Comment1 "~25mA constant draw at 5Vin"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+12V #PWR?
+U 1 1 5C240BCD
+P 1850 950
+F 0 "#PWR?" H 1850 800 50  0001 C CNN
+F 1 "+12V" H 1865 1123 50  0000 C CNN
+F 2 "" H 1850 950 50  0001 C CNN
+F 3 "" H 1850 950 50  0001 C CNN
+	1    1850 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C240C33
+P 3250 1650
+F 0 "#PWR?" H 3250 1400 50  0001 C CNN
+F 1 "GND" H 3255 1477 50  0000 C CNN
+F 2 "" H 3250 1650 50  0001 C CNN
+F 3 "" H 3250 1650 50  0001 C CNN
+	1    3250 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Switching:CRE1S1205SC U?
+U 1 1 5C242092
+P 2550 1300
+F 0 "U?" H 2550 1767 50  0000 C CNN
+F 1 "CRE1S1205SC" H 2550 1676 50  0000 C CNN
+F 2 "Converter_DCDC:Converter_DCDC_muRata_CRE1xxxxxxSC_THT" H 2550 900 50  0001 C CNN
+F 3 "http://power.murata.com/datasheet?/data/power/ncl/kdc_cre1.pdf" H 2550 800 50  0001 C CNN
+	1    2550 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J?
+U 1 1 5C2422C4
+P 950 1350
+F 0 "J?" H 870 1025 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 870 1116 50  0000 C CNN
+F 2 "" H 950 1350 50  0001 C CNN
+F 3 "~" H 950 1350 50  0001 C CNN
+	1    950  1350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GNDREF #PWR?
+U 1 1 5C2423F8
+P 1850 1650
+F 0 "#PWR?" H 1850 1400 50  0001 C CNN
+F 1 "GNDREF" H 1855 1477 50  0000 C CNN
+F 2 "" H 1850 1650 50  0001 C CNN
+F 3 "" H 1850 1650 50  0001 C CNN
+	1    1850 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 1500 1850 1500
+Wire Wire Line
+	1850 1500 1850 1650
+Wire Wire Line
+	1850 1500 1600 1500
+Wire Wire Line
+	1600 1500 1600 1350
+Wire Wire Line
+	1600 1350 1150 1350
+Connection ~ 1850 1500
+Wire Wire Line
+	1150 1250 1600 1250
+Wire Wire Line
+	1600 1250 1600 1100
+Wire Wire Line
+	1600 1100 1850 1100
+Wire Wire Line
+	1850 1100 1850 950 
+Connection ~ 1850 1100
+Wire Wire Line
+	1850 1100 2050 1100
+$Comp
+L power:+5V #PWR?
+U 1 1 5C242508
+P 3250 950
+F 0 "#PWR?" H 3250 800 50  0001 C CNN
+F 1 "+5V" H 3265 1123 50  0000 C CNN
+F 2 "" H 3250 950 50  0001 C CNN
+F 3 "" H 3250 950 50  0001 C CNN
+	1    3250 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 1100 3250 1100
+Wire Wire Line
+	3250 1100 3250 950 
+Wire Wire Line
+	3050 1500 3250 1500
+Wire Wire Line
+	3250 1500 3250 1650
+Text Notes 2300 1900 0    50   ~ 0
+Power supply
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A?
+U 1 1 5C2429A7
+P 7000 2850
+F 0 "A?" H 7000 1764 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 7000 1673 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 7150 1900 50  0001 L CNN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 7000 1850 50  0001 C CNN
+	1    7000 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C242A44
+P 7100 4150
+F 0 "#PWR?" H 7100 3900 50  0001 C CNN
+F 1 "GND" H 7105 3977 50  0000 C CNN
+F 2 "" H 7100 4150 50  0001 C CNN
+F 3 "" H 7100 4150 50  0001 C CNN
+	1    7100 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 4150 7100 3850
+$Comp
+L power:+5V #PWR?
+U 1 1 5C242B2C
+P 6900 1700
+F 0 "#PWR?" H 6900 1550 50  0001 C CNN
+F 1 "+5V" H 6915 1873 50  0000 C CNN
+F 2 "" H 6900 1700 50  0001 C CNN
+F 3 "" H 6900 1700 50  0001 C CNN
+	1    6900 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 1850 6900 1700
+$Comp
+L Device:R R?
+U 1 1 5C242C40
+P 5100 2250
+F 0 "R?" V 5307 2250 50  0000 C CNN
+F 1 "12k" V 5216 2250 50  0000 C CNN
+F 2 "" V 5030 2250 50  0001 C CNN
+F 3 "~" H 5100 2250 50  0001 C CNN
+	1    5100 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C24301C
+P 5100 2650
+F 0 "R?" V 5307 2650 50  0000 C CNN
+F 1 "12k" V 5216 2650 50  0000 C CNN
+F 2 "" V 5030 2650 50  0001 C CNN
+F 3 "~" H 5100 2650 50  0001 C CNN
+	1    5100 2650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C243069
+P 5100 3050
+F 0 "R?" V 5307 3050 50  0000 C CNN
+F 1 "12k" V 5216 3050 50  0000 C CNN
+F 2 "" V 5030 3050 50  0001 C CNN
+F 3 "~" H 5100 3050 50  0001 C CNN
+	1    5100 3050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C24346C
+P 5600 2250
+F 0 "R?" V 5807 2250 50  0000 C CNN
+F 1 "6800" V 5716 2250 50  0000 C CNN
+F 2 "" V 5530 2250 50  0001 C CNN
+F 3 "~" H 5600 2250 50  0001 C CNN
+	1    5600 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C243473
+P 5600 2650
+F 0 "R?" V 5807 2650 50  0000 C CNN
+F 1 "6800" V 5716 2650 50  0000 C CNN
+F 2 "" V 5530 2650 50  0001 C CNN
+F 3 "~" H 5600 2650 50  0001 C CNN
+	1    5600 2650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5C24347A
+P 5600 3050
+F 0 "R?" V 5807 3050 50  0000 C CNN
+F 1 "6800" V 5716 3050 50  0000 C CNN
+F 2 "" V 5530 3050 50  0001 C CNN
+F 3 "~" H 5600 3050 50  0001 C CNN
+	1    5600 3050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x03 J?
+U 1 1 5C243C61
+P 4250 2650
+F 0 "J?" H 4170 2325 50  0000 C CNN
+F 1 "Screw_Terminal_01x03" H 4170 2416 50  0000 C CNN
+F 2 "" H 4250 2650 50  0001 C CNN
+F 3 "~" H 4250 2650 50  0001 C CNN
+	1    4250 2650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4450 2650 4950 2650
+Wire Wire Line
+	4450 2550 4850 2550
+Wire Wire Line
+	4850 2550 4850 2250
+Wire Wire Line
+	4850 2250 4950 2250
+Wire Wire Line
+	4450 2750 4850 2750
+Wire Wire Line
+	4850 2750 4850 3050
+Wire Wire Line
+	4850 3050 4950 3050
+Wire Wire Line
+	5250 2250 5350 2250
+Wire Wire Line
+	5450 2650 5350 2650
+Wire Wire Line
+	5250 3050 5350 3050
+$Comp
+L Device:CP C?
+U 1 1 5C252BEC
+P 3250 1300
+F 0 "C?" H 3368 1346 50  0000 L CNN
+F 1 "10uF" H 3368 1255 50  0000 L CNN
+F 2 "" H 3288 1150 50  0001 C CNN
+F 3 "~" H 3250 1300 50  0001 C CNN
+	1    3250 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 1150 3250 1100
+Connection ~ 3250 1100
+Wire Wire Line
+	3250 1450 3250 1500
+Connection ~ 3250 1500
+$Comp
+L Device:CP C?
+U 1 1 5C2536A2
+P 7600 1550
+F 0 "C?" H 7718 1596 50  0000 L CNN
+F 1 "10uF" H 7718 1505 50  0000 L CNN
+F 2 "" H 7638 1400 50  0001 C CNN
+F 3 "~" H 7600 1550 50  0001 C CNN
+	1    7600 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 1850 7100 1300
+Wire Wire Line
+	7600 1300 7600 1400
+$Comp
+L power:GND #PWR?
+U 1 1 5C2541BA
+P 7600 1800
+F 0 "#PWR?" H 7600 1550 50  0001 C CNN
+F 1 "GND" H 7605 1627 50  0000 C CNN
+F 2 "" H 7600 1800 50  0001 C CNN
+F 3 "" H 7600 1800 50  0001 C CNN
+	1    7600 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 1300 7600 1300
+Wire Wire Line
+	7600 1700 7600 1800
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C254B9B
+P 7100 1200
+F 0 "#PWR?" H 7100 1050 50  0001 C CNN
+F 1 "+3.3V" H 7115 1373 50  0000 C CNN
+F 2 "" H 7100 1200 50  0001 C CNN
+F 3 "" H 7100 1200 50  0001 C CNN
+	1    7100 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 1300 7100 1200
+Connection ~ 7100 1300
+$Comp
+L power:GND #PWR?
+U 1 1 5C2558CC
+P 5850 3250
+F 0 "#PWR?" H 5850 3000 50  0001 C CNN
+F 1 "GND" H 5855 3077 50  0000 C CNN
+F 2 "" H 5850 3250 50  0001 C CNN
+F 3 "" H 5850 3250 50  0001 C CNN
+	1    5850 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 2250 5850 2250
+Wire Wire Line
+	5850 2250 5850 2650
+Wire Wire Line
+	5750 3050 5850 3050
+Connection ~ 5850 3050
+Wire Wire Line
+	5850 3050 5850 3250
+Wire Wire Line
+	5750 2650 5850 2650
+Connection ~ 5850 2650
+Wire Wire Line
+	5850 2650 5850 3050
+Wire Wire Line
+	5350 2250 5350 2350
+Connection ~ 5350 2250
+Wire Wire Line
+	5350 2250 5450 2250
+Wire Wire Line
+	5350 2650 5350 2750
+Wire Wire Line
+	5350 2750 5950 2750
+Wire Wire Line
+	5950 2750 5950 2550
+Wire Wire Line
+	5950 2550 6500 2550
+Connection ~ 5350 2650
+Wire Wire Line
+	5350 2650 5250 2650
+Wire Wire Line
+	5350 3050 5350 3150
+Wire Wire Line
+	5350 3150 6050 3150
+Wire Wire Line
+	6050 2750 6500 2750
+Connection ~ 5350 3050
+Wire Wire Line
+	5350 3050 5450 3050
+Text Notes 4500 2750 0    50   ~ 0
+brake
+Text Notes 4500 2550 0    50   ~ 0
+left
+Text Notes 4500 2650 0    50   ~ 0
+right
+Wire Wire Line
+	6050 3150 6050 2750
+$Comp
+L RF:NRF24L01_Breakout U?
+U 1 1 5C25BA60
+P 5450 4350
+F 0 "U?" H 5928 4328 50  0000 L CNN
+F 1 "NRF24L01_Breakout" H 5928 4237 50  0000 L CNN
+F 2 "RF_Module:nRF24L01_Breakout" H 5600 4950 50  0001 L CIN
+F 3 "http://www.nordicsemi.com/eng/content/download/2730/34105/file/nRF24L01_Product_Specification_v2_0.pdf" H 5450 4250 50  0001 C CNN
+	1    5450 4350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C25E107
+P 5450 5050
+F 0 "#PWR?" H 5450 4800 50  0001 C CNN
+F 1 "GND" H 5455 4877 50  0000 C CNN
+F 2 "" H 5450 5050 50  0001 C CNN
+F 3 "" H 5450 5050 50  0001 C CNN
+	1    5450 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5C25EAF0
+P 5450 3650
+F 0 "#PWR?" H 5450 3500 50  0001 C CNN
+F 1 "+3.3V" H 5465 3823 50  0000 C CNN
+F 2 "" H 5450 3650 50  0001 C CNN
+F 3 "" H 5450 3650 50  0001 C CNN
+	1    5450 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 3750 5450 3650
+Wire Wire Line
+	5450 5050 5450 4950
+Wire Wire Line
+	6500 2950 6150 2950
+Wire Wire Line
+	6150 2950 6150 4550
+Wire Wire Line
+	6150 4550 5950 4550
+Wire Wire Line
+	6500 3050 6200 3050
+Wire Wire Line
+	6200 3050 6200 4350
+Wire Wire Line
+	6200 4350 5950 4350
+Wire Wire Line
+	6500 3350 6250 3350
+Wire Wire Line
+	6250 3350 6250 4050
+Wire Wire Line
+	6250 4050 5950 4050
+Wire Wire Line
+	6500 3450 6300 3450
+Wire Wire Line
+	6300 3450 6300 4150
+Wire Wire Line
+	6300 4150 5950 4150
+Wire Wire Line
+	6500 3550 6350 3550
+Wire Wire Line
+	6350 3550 6350 4250
+Wire Wire Line
+	6350 4250 5950 4250
+NoConn ~ 5950 4650
+NoConn ~ 6500 3150
+NoConn ~ 6500 3250
+NoConn ~ 6500 2850
+NoConn ~ 6500 2650
+NoConn ~ 6500 2350
+NoConn ~ 6500 2250
+NoConn ~ 7000 3850
+NoConn ~ 7200 1850
+NoConn ~ 7500 2250
+NoConn ~ 7500 2350
+NoConn ~ 7500 2650
+NoConn ~ 7500 2850
+NoConn ~ 7500 2950
+NoConn ~ 7500 3050
+NoConn ~ 7500 3150
+NoConn ~ 7500 3250
+NoConn ~ 7500 3350
+NoConn ~ 7500 3450
+NoConn ~ 7500 3550
+Wire Wire Line
+	5350 2350 5950 2350
+Wire Wire Line
+	5950 2350 5950 2450
+Wire Wire Line
+	5950 2450 6500 2450
+$EndSCHEMATC
