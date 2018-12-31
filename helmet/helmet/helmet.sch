@@ -1,0 +1,317 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A?
+U 1 1 5C295B9E
+P 5700 3550
+F 0 "A?" H 5700 2464 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 5700 2373 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 5850 2600 50  0001 L CNN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 5700 2550 50  0001 C CNN
+	1    5700 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C295C45
+P 5800 4900
+F 0 "#PWR?" H 5800 4650 50  0001 C CNN
+F 1 "GND" H 5805 4727 50  0000 C CNN
+F 2 "" H 5800 4900 50  0001 C CNN
+F 3 "" H 5800 4900 50  0001 C CNN
+	1    5800 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5C295CA4
+P 5600 2300
+F 0 "#PWR?" H 5600 2150 50  0001 C CNN
+F 1 "+5V" H 5615 2473 50  0000 C CNN
+F 2 "" H 5600 2300 50  0001 C CNN
+F 3 "" H 5600 2300 50  0001 C CNN
+	1    5600 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 2550 5600 2300
+Wire Wire Line
+	5800 4550 5800 4900
+$Comp
+L Device:R_PHOTO R?
+U 1 1 5C295D9A
+P 6550 3900
+F 0 "R?" H 6620 3946 50  0000 L CNN
+F 1 "R_PHOTO" H 6620 3855 50  0000 L CNN
+F 2 "" V 6600 3650 50  0001 L CNN
+F 3 "~" H 6550 3850 50  0001 C CNN
+	1    6550 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5C295E74
+P 6550 3700
+F 0 "#PWR?" H 6550 3550 50  0001 C CNN
+F 1 "+5V" H 6565 3873 50  0000 C CNN
+F 2 "" H 6550 3700 50  0001 C CNN
+F 3 "" H 6550 3700 50  0001 C CNN
+	1    6550 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 4150 6550 4150
+Wire Wire Line
+	6550 3750 6550 3700
+$Comp
+L Device:R R?
+U 1 1 5C295F17
+P 6550 4400
+F 0 "R?" H 6620 4446 50  0000 L CNN
+F 1 "10k" H 6620 4355 50  0000 L CNN
+F 2 "" V 6480 4400 50  0001 C CNN
+F 3 "~" H 6550 4400 50  0001 C CNN
+	1    6550 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 4050 6550 4150
+Wire Wire Line
+	6550 4150 6550 4250
+Connection ~ 6550 4150
+Wire Wire Line
+	6550 4550 6550 4650
+$Comp
+L power:GND #PWR?
+U 1 1 5C295FF5
+P 6550 4650
+F 0 "#PWR?" H 6550 4400 50  0001 C CNN
+F 1 "GND" H 6555 4477 50  0000 C CNN
+F 2 "" H 6550 4650 50  0001 C CNN
+F 3 "" H 6550 4650 50  0001 C CNN
+	1    6550 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L RF:NRF24L01_Breakout U?
+U 1 1 5C2960CD
+P 4200 3950
+F 0 "U?" H 4678 3835 50  0000 L CNN
+F 1 "NRF24L01_Breakout" H 4678 3926 50  0000 L CNN
+F 2 "RF_Module:nRF24L01_Breakout" H 4350 4550 50  0001 L CIN
+F 3 "http://www.nordicsemi.com/eng/content/download/2730/34105/file/nRF24L01_Product_Specification_v2_0.pdf" H 4200 3850 50  0001 C CNN
+	1    4200 3950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C296192
+P 4400 3250
+F 0 "#PWR?" H 4400 3000 50  0001 C CNN
+F 1 "GND" H 4405 3077 50  0000 C CNN
+F 2 "" H 4400 3250 50  0001 C CNN
+F 3 "" H 4400 3250 50  0001 C CNN
+	1    4400 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5C2962BB
+P 3650 4450
+F 0 "#PWR?" H 3650 4300 50  0001 C CNN
+F 1 "+3V3" H 3665 4623 50  0000 C CNN
+F 2 "" H 3650 4450 50  0001 C CNN
+F 3 "" H 3650 4450 50  0001 C CNN
+	1    3650 4450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5C2962E9
+P 5800 2400
+F 0 "#PWR?" H 5800 2250 50  0001 C CNN
+F 1 "+3V3" H 5815 2573 50  0000 C CNN
+F 2 "" H 5800 2400 50  0001 C CNN
+F 3 "" H 5800 2400 50  0001 C CNN
+	1    5800 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 2400 5800 2550
+$Comp
+L Device:CP C?
+U 1 1 5C29641B
+P 4200 4750
+F 0 "C?" H 4318 4796 50  0000 L CNN
+F 1 "CP" H 4318 4705 50  0000 L CNN
+F 2 "" H 4238 4600 50  0001 C CNN
+F 3 "~" H 4200 4750 50  0001 C CNN
+	1    4200 4750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 4450 3650 4550
+Wire Wire Line
+	4200 4600 4200 4550
+Wire Wire Line
+	4200 4550 3650 4550
+$Comp
+L power:GND #PWR?
+U 1 1 5C296688
+P 4200 5050
+F 0 "#PWR?" H 4200 4800 50  0001 C CNN
+F 1 "GND" H 4205 4877 50  0000 C CNN
+F 2 "" H 4200 5050 50  0001 C CNN
+F 3 "" H 4200 5050 50  0001 C CNN
+	1    4200 5050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 5050 4200 4900
+NoConn ~ 6200 2950
+NoConn ~ 6200 3050
+NoConn ~ 6200 3350
+NoConn ~ 6200 3550
+NoConn ~ 6200 3650
+NoConn ~ 6200 3750
+NoConn ~ 6200 3850
+NoConn ~ 6200 3950
+NoConn ~ 6200 4050
+NoConn ~ 6200 4250
+$Comp
+L Connector:Screw_Terminal_01x03 J?
+U 1 1 5C29A801
+P 4400 2350
+F 0 "J?" H 4320 2025 50  0000 C CNN
+F 1 "Screw_Terminal_01x03" H 4320 2116 50  0000 C CNN
+F 2 "" H 4400 2350 50  0001 C CNN
+F 3 "~" H 4400 2350 50  0001 C CNN
+	1    4400 2350
+	-1   0    0    1   
+$EndComp
+NoConn ~ 4700 3650
+Wire Wire Line
+	4700 4050 5000 4250
+Wire Wire Line
+	5000 4250 5200 4250
+Wire Wire Line
+	4700 4250 5000 4050
+Wire Wire Line
+	5000 4050 5200 4050
+Wire Wire Line
+	4700 3950 4900 3950
+Wire Wire Line
+	4900 3950 4900 3750
+Wire Wire Line
+	4900 3750 5200 3750
+Wire Wire Line
+	4700 3750 4800 3750
+Wire Wire Line
+	4800 3750 4800 3650
+Wire Wire Line
+	4800 3650 5200 3650
+Wire Wire Line
+	4200 3350 4200 3150
+Wire Wire Line
+	4200 3150 4400 3150
+Wire Wire Line
+	4400 3150 4400 3250
+Connection ~ 4200 4550
+$Comp
+L power:GND #PWR?
+U 1 1 5C2A1237
+P 4700 2550
+F 0 "#PWR?" H 4700 2300 50  0001 C CNN
+F 1 "GND" H 4705 2377 50  0000 C CNN
+F 2 "" H 4700 2550 50  0001 C CNN
+F 3 "" H 4700 2550 50  0001 C CNN
+	1    4700 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5C2A12A8
+P 4700 2000
+F 0 "#PWR?" H 4700 1850 50  0001 C CNN
+F 1 "+5V" H 4715 2173 50  0000 C CNN
+F 2 "" H 4700 2000 50  0001 C CNN
+F 3 "" H 4700 2000 50  0001 C CNN
+	1    4700 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 2350 4950 2350
+Wire Wire Line
+	4950 2350 4950 3150
+Wire Wire Line
+	4950 3150 5200 3150
+Wire Wire Line
+	4700 2550 4700 2450
+Wire Wire Line
+	4700 2450 4600 2450
+Wire Wire Line
+	4600 2250 4700 2250
+Wire Wire Line
+	4700 2250 4700 2000
+$Comp
+L power:+BATT #PWR?
+U 1 1 5C2A1E9F
+P 1050 950
+F 0 "#PWR?" H 1050 800 50  0001 C CNN
+F 1 "+BATT" H 1065 1123 50  0000 C CNN
+F 2 "" H 1050 950 50  0001 C CNN
+F 3 "" H 1050 950 50  0001 C CNN
+	1    1050 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-BATT #PWR?
+U 1 1 5C2A1F33
+P 1050 1250
+F 0 "#PWR?" H 1050 1100 50  0001 C CNN
+F 1 "-BATT" H 1065 1423 50  0000 C CNN
+F 2 "" H 1050 1250 50  0001 C CNN
+F 3 "" H 1050 1250 50  0001 C CNN
+	1    1050 1250
+	-1   0    0    1   
+$EndComp
+Text Notes 1250 1200 0    157  ~ 0
+? -> 5v
+$Comp
+L power:+5V #PWR?
+U 1 1 5C2A206F
+P 2450 950
+F 0 "#PWR?" H 2450 800 50  0001 C CNN
+F 1 "+5V" H 2465 1123 50  0000 C CNN
+F 2 "" H 2450 950 50  0001 C CNN
+F 3 "" H 2450 950 50  0001 C CNN
+	1    2450 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C2A20B6
+P 2450 1250
+F 0 "#PWR?" H 2450 1000 50  0001 C CNN
+F 1 "GND" H 2455 1077 50  0000 C CNN
+F 2 "" H 2450 1250 50  0001 C CNN
+F 3 "" H 2450 1250 50  0001 C CNN
+	1    2450 1250
+	1    0    0    -1  
+$EndComp
+Text Notes 1350 1700 0    79   ~ 0
+power supply
+$EndSCHEMATC
